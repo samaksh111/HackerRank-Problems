@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    cout << "Lengths: [" << a << ", " << b << ", " << c << "]" << endl;
+    
+    if (a + b <= c || a + c <= b || b + c <= a)
+        cout << "Type: Invalid\nCannot form a valid shape.";
+    else if (a == b && b == c)
+        cout << "Type: Equilateral\nAll sides are of the same length.";
+    else if (a == b || b == c || a == c)
+        cout << "Type: Isosceles\nExactly two sides are equal.";
+    else
+        cout << "Type: Scalene\nAll sides are of different lengths.";
+    
+    return 0;
+}
