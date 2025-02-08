@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int bud, ng, fcpg, dc, mc, ee, tfc, count=0;
+    scanf("%d, %d, %d, %d, %d, %d, %d",&bud, &ng, &fcpg, &dc, &mc, &ee, &tfc);
+    tfc=ng*fcpg;
+    if(bud<(tfc+dc+mc+ee))
+        count++;
+else if(ng>5 && ng<=50)
+        count++;
+else if((dc<(0.3 * bud)) || (tfc< (0.5 * bud)))
+        count++;
+   else if(ng > 25 && mc>0)
+        count++;
+    else if(count=4)
+    {
+        printf("Celebration Approved");
+    }
+else
+{
+    printf("Celebration Denied");
+}
+    return 0;
+}
